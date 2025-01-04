@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Rashmi Joshi | Portfolio</title>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header id="home" class="header">
+        <div class="intro">
+            <h1 class="gradient-text">Hello, I'm Rashmi Joshi</h1>
+            <h3>And I'm a <span class="typing-text">Frontend Developer</span></h3>
+            <p>Let’s connect and create something amazing together!</p>
+            <a href="#contact" class="button">Contact Me</a>
+        </div>
+    </header>
+
+    <section id="about" class="section about">
+        <h1>About <span class="highlight">Me</span></h1>
+        <div class="card1">
+            <p>
+                I am a passionate web developer dedicated to crafting immersive digital experiences. With a love for
+                problem-solving, I specialize in creating user-friendly websites and applications. Experienced in
+                frontend development, I am committed to staying ahead of the curve. Let’s collaborate and bring your web
+                projects to life!
+            </p>
+
+            <img class="mine" src="photo.jpeg" alt="My Photo">
+
+        </div>
+
+    </section>
+
+    <section id="services" class="section services">
+        <h1>My <span class="highlight">Services</span></h1>
+        <div class="card">
+            <h2>Frontend Development</h2>
+            <p>I specialize in HTML, CSS, JavaScript to create responsive, modern websites.</p>
+        </div>
+        <div class="card">
+            <h2>Graphic Design</h2>
+            <p>Designing intuitive logos and brochures using Figma and Canva.</p>
+        </div>
+        <div class="card">
+            <h2>Personalized Website Creation
+
+
+            </h2>
+            <p> Build personal blogs or event-based websites tailored to
+                individual needs.</p>
+        </div>
+
+    </section>
+
+    <section id="projects" class="section projects">
+        <h1>Latest <span class="highlight">Projects</span></h1>
+        <div class="card">
+            <img src="project1.png" alt="Project 1">
+            <h3>E-Commerce Airline Website</h3>
+            <p>A responsive e-commerce platform for booking tickets for international and national travel.</p>
+        </div>
+        <div class="card">
+            <img src="project2.png" alt="Project 2">
+            <h3>Flipkart Clone</h3>
+            <p>A dynamic Flipkart-inspired website built with HTML and CSS.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact">
+        <h1>Contact <span class="highlight">Me</span></h1>
+        <form id="contactForm">
+            <input type="text" class="form-input" placeholder="Full Name" id="name" required>
+            <input type="email" class="form-input" placeholder="Email Address" id="email" required>
+            <input type="tel" class="form-input" placeholder="Mobile Number" id="phone" required>
+            <textarea class="form-input" placeholder="Your Message" id="message" required></textarea>
+            <!-- <button type="submit" class="button2">Send Message</button> -->
+        </form>
+        <button type="submit" class="button2">Send Message</button>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; <span id="currentYear"></span> Rashmi Joshi | Connect with me:</p>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/rashmi-joshi-148850320/" target="_blank">
+                <img src="linkedin.jpg" alt="LinkedIn">
+            </a>
+            <a href="https://github.com/Rashmijoshi18" target="_blank">
+                <img src="images.png" alt="GitHub">
+            </a>
+            <a href="mailto:rashmijoshi3699@gmail.com" target="_blank">
+                <img src="images (1).png" alt="Email">
+            </a>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+    <script>
+        // Dynamic Year for Footer
+        document.getElementById("currentYear").textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
