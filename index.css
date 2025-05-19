@@ -22,6 +22,45 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Projects Section */
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.projects .card {
+    flex: 1 1 300px;
+    /* This makes cards flexible with minimum width of 300px */
+    max-width: 350px;
+    margin: 0;
+    transition: transform 0.3s ease;
+    /* Remove the auto margin from individual cards */
+}
+
+.projects .card img {
+    width: 100%;
+    /* Make images fill the card width */
+    height: 400px;
+    /* Set a fixed height for consistency */
+    object-fit: cover;
+    /* Ensure images cover the space nicely */
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
 /* Logo and heading */
 .logo {
     display: flex;
@@ -152,9 +191,10 @@ body {
 }
 
 .card img {
-    width: 100%;
+    width: 70%;
     border-radius: 10px;
     margin-bottom: 15px;
+    margin-top: 0px;
 }
 
 .card1 img {
@@ -230,6 +270,8 @@ body {
     opacity: 0;
     transform: translateY(50px);
     transition: all 0.6s ease-in-out;
+
+
 }
 
 .section.animate,
@@ -239,36 +281,69 @@ body {
 }
 
 /* Responsive Design */
+/* ======================
+   RESPONSIVE DESIGN
+   ====================== */
 @media (max-width: 768px) {
+
+    /* Typography */
     .gradient-text {
         font-size: 2.5rem;
     }
 
+    /* Navigation */
     .nav-links {
         display: none;
-        flex-direction: column;
-        gap: 20px;
         position: absolute;
         top: 70px;
-        right: 30px;
+        right: 0;
         background-color: rgba(0, 0, 0, 0.95);
-        padding: 20px;
-        border-radius: 10px;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
     }
 
     .nav-links.show {
         display: flex;
+        flex-direction: column;
+        gap: 15px;
     }
 
     .menu-icon {
         display: block;
     }
 
-    .header {
-        padding: 0 20px;
+    /* Projects Section - Stack vertically */
+    .projects {
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 15px;
     }
 
+    .projects .card {
+        width: 100%;
+        max-width: 400px;
+        margin-bottom: 25px;
+    }
+
+    /* Form adjustments */
     .form-input {
         width: 90%;
+    }
+}
+
+/* Smaller mobile devices */
+@media (max-width: 480px) {
+    .gradient-text {
+        font-size: 2rem;
+    }
+
+    .header .intro h3 {
+        font-size: 1.2rem;
+    }
+
+    .card,
+    .card1 {
+        padding: 15px;
     }
 }
