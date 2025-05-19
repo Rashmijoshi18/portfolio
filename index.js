@@ -145,3 +145,20 @@ document.querySelectorAll(".button, .button2").forEach(button => {
         button.style.boxShadow = "none";
     });
 });
+// Navbar toggle for mobile menu
+const menuIcon = document.getElementById('menu-icon');
+const navLinks = document.getElementById('nav-links');
+
+menuIcon.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+});
+
+// Close mobile menu when any nav link is clicked
+document.querySelectorAll('#nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('show');
+    });
+});
+
+// Dynamic Year for Footer
+document.getElementById("currentYear").textContent = new Date().getFullYear();
