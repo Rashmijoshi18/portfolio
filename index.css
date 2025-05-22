@@ -214,6 +214,7 @@ body {
     font-size: 16px;
 }
 
+
 .form-input:focus {
     outline: none;
     border: 2px solid #00f0ff;
@@ -345,5 +346,44 @@ body {
     .card,
     .card1 {
         padding: 15px;
+    }
+}
+
+/* Group the two hero-section buttons */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    /* space between buttons */
+    flex-wrap: wrap;
+    /* wrap on small screens */
+    margin-top: 20px;
+    /* space above the buttons */
+}
+
+/* Ensure both buttons share the same look */
+.button-group .button {
+    background-color: #00f0ff;
+    color: black;
+    padding: 10px 25px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    text-decoration: none;
+    /* in case it's an <a> */
+}
+
+.button-group .button:hover {
+    transform: scale(1.1);
+    background-color: #008c99;
+}
+
+/* Responsive tweak: stack buttons on very small screens */
+@media (max-width: 480px) {
+    .button-group {
+        flex-direction: column;
+        gap: 15px;
     }
 }
