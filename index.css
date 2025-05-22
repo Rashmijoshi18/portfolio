@@ -9,7 +9,7 @@ body {
     line-height: 1.6;
 }
 
-/* Navbar */
+
 .navbar {
     position: sticky;
     top: 0;
@@ -22,7 +22,7 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Projects Section */
+
 .projects {
     display: flex;
     flex-wrap: wrap;
@@ -35,20 +35,20 @@ body {
 
 .projects .card {
     flex: 1 1 300px;
-    /* This makes cards flexible with minimum width of 300px */
+
     max-width: 350px;
     margin: 0;
     transition: transform 0.3s ease;
-    /* Remove the auto margin from individual cards */
+
 }
 
 .projects .card img {
     width: 100%;
-    /* Make images fill the card width */
+
     height: 400px;
-    /* Set a fixed height for consistency */
+
     object-fit: cover;
-    /* Ensure images cover the space nicely */
+
 }
 
 .projects-container {
@@ -61,7 +61,7 @@ body {
     padding: 20px;
 }
 
-/* Logo and heading */
+
 .logo {
     display: flex;
     align-items: center;
@@ -77,7 +77,7 @@ body {
     border-radius: 50%;
 }
 
-/* Navigation links */
+
 .nav-links {
     list-style: none;
     display: flex;
@@ -106,7 +106,7 @@ body {
     display: none;
 }
 
-/* Header section */
+
 .header {
     display: flex;
     justify-content: center;
@@ -240,32 +240,41 @@ body {
 
 .footer {
     background-color: #111;
-    padding: 20px 10px;
+    padding: 30px 20px;
     text-align: center;
-    color: white;
+    color: #ccc;
+    font-size: 16px;
+    border-top: 2px solid #00f0ff;
 }
 
 .footer p {
-    margin: 0 0 10px 0;
+    margin: 0 0 15px;
+    font-weight: 500;
 }
 
 .social-icons {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 25px;
     margin-top: 10px;
 }
 
 .social-icons a img {
-    height: 30px;
-    transition: transform 0.3s ease;
+    height: 35px;
+    width: 35px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    border-radius: 50%;
+    background-color: #fff;
+    padding: 5px;
 }
+
 
 .social-icons a:hover img {
     transform: scale(1.2);
+    filter: brightness(1.2);
 }
 
-/* Scroll animation */
+
 .section,
 .card {
     opacity: 0;
@@ -281,18 +290,15 @@ body {
     transform: translate(0);
 }
 
-/* Responsive Design */
-/* ======================
-   RESPONSIVE DESIGN
-   ====================== */
+
 @media (max-width: 768px) {
 
-    /* Typography */
+
     .gradient-text {
         font-size: 2.5rem;
     }
 
-    /* Navigation */
+
     .nav-links {
         display: none;
         position: absolute;
@@ -314,7 +320,7 @@ body {
         display: block;
     }
 
-    /* Projects Section - Stack vertically */
+
     .projects {
         flex-direction: column;
         align-items: center;
@@ -327,13 +333,13 @@ body {
         margin-bottom: 25px;
     }
 
-    /* Form adjustments */
+
     .form-input {
         width: 90%;
     }
 }
 
-/* Smaller mobile devices */
+
 @media (max-width: 480px) {
     .gradient-text {
         font-size: 2rem;
@@ -349,19 +355,18 @@ body {
     }
 }
 
-/* Group the two hero-section buttons */
+
 .button-group {
     display: flex;
     justify-content: center;
     gap: 20px;
-    /* space between buttons */
+
     flex-wrap: wrap;
-    /* wrap on small screens */
+
     margin-top: 20px;
-    /* space above the buttons */
+
 }
 
-/* Ensure both buttons share the same look */
 .button-group .button {
     background-color: #00f0ff;
     color: black;
@@ -372,7 +377,7 @@ body {
     font-size: 18px;
     transition: transform 0.3s ease, background-color 0.3s ease;
     text-decoration: none;
-    /* in case it's an <a> */
+
 }
 
 .button-group .button:hover {
@@ -380,22 +385,22 @@ body {
     background-color: #008c99;
 }
 
-/* Responsive tweak: stack buttons on very small screens */
+
 @media (max-width: 480px) {
     .button-group {
         flex-direction: row;
-        /* gap: 15px; */
+
         gap: 10px;
-        /* smaller gap */
+
         justify-content: center;
         flex-wrap: nowrap;
     }
 
     .button-group .button {
         padding: 8px 16px;
-        /* smaller padding */
+
         font-size: 14px;
-        /* smaller font */
+
     }
 
 }

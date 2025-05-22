@@ -119,25 +119,33 @@
     </section>
 
     <footer class="footer">
-        <p>&copy; <span id="currentYear"></span> Rashmi Joshi | Connect with me:</p>
+        <!-- <p>&copy; <span id="currentYear"></span> Rashmi Joshi | Connect with me:</p> -->
         <div class="social-icons">
-            <a href="https://www.linkedin.com/in/rashmi-joshi-148850320/" target="_blank">
-                <img src="linkedin.jpg" alt="LinkedIn" />
+            <a href="https://www.linkedin.com/in/rashmi-joshi-148850320/" target="_blank" aria-label="LinkedIn">
+                <img src="linkedin.jpg" alt="LinkedIn Icon" />
             </a>
-            <a href="https://github.com/Rashmijoshi18" target="_blank">
-                <img src="images.png" alt="GitHub" />
+            <a href="https://github.com/Rashmijoshi18" target="_blank" aria-label="GitHub">
+                <img src="images.png" alt="GitHub Icon" />
             </a>
-            <a href="mailto:rashmijoshi3699@gmail.com" target="_blank">
-                <img src="images (1).png" alt="Email" />
+            <a href="mailto:rashmijoshi3699@gmail.com" target="_blank" aria-label="Email">
+                <img src="images (1).png" alt="Email Icon" />
             </a>
         </div>
     </footer>
 
+
+
     <script src="index.js"></script>
     <script>
-        // Dynamic Year for Footer
-        document.getElementById("currentYear").textContent = new Date().getFullYear();
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer-placeholder").innerHTML = data;
+                document.getElementById("currentYear").textContent = new Date().getFullYear();
+            });
     </script>
+
+
 </body>
 
 </html>
