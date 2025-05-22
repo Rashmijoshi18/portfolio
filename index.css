@@ -383,7 +383,19 @@ body {
 /* Responsive tweak: stack buttons on very small screens */
 @media (max-width: 480px) {
     .button-group {
-        flex-direction: column;
-        gap: 15px;
+        flex-direction: row;
+        /* gap: 15px; */
+        gap: 10px;
+        /* smaller gap */
+        justify-content: center;
+        flex-wrap: nowrap;
     }
+
+    .button-group .button {
+        padding: 8px 16px;
+        /* smaller padding */
+        font-size: 14px;
+        /* smaller font */
+    }
+
 }
