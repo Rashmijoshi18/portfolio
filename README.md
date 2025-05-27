@@ -1,3 +1,1 @@
-PERSONAL PORTFOLIO  SHOWING BRIEF ABOUT ME 
-
-
+A modern, responsive portfolio website showcasing my skills and projects.
